@@ -1,0 +1,144 @@
+/* Overall page background with dynamic gradient effect */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #ff6a00, #ff1493, #00bfff, #32cd32);
+  background-size: 400% 400%;
+  animation: gradientBackground 10s ease infinite;
+  color: #fff;
+  text-align: center;
+}
+
+/* Gradient Animation */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Main game container */
+.game-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Leaderboard Styling */
+#leaderboard {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#leaderboard h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+#leaderboard ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#leaderboard li {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 1.1rem;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+#leaderboard li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#leaderboard li img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#leaderboard li[style="background-color: rgb(240, 196, 32);"] {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Buttons Styling */
+button {
+  padding: 15px 30px;
+  background-color: #ff1493;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff1f99;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+/* Timer Styling */
+#timer {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #ffeb3b;
+}
+
+/* High Score Styling */
+#highScore {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  color: #4caf50;
+}
+
+/* Difficulty Dropdown */
+select {
+  padding: 8px 15px;
+  font-size: 1rem;
+  margin-top: 15px;
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+select:hover {
+  background-color: #00a3cc;
+}
+
+/* Clear Leaderboard Button */
+button#clearLeaderboard {
+  background-color: #f44336;
+  margin-top: 20px;
+}
+
+button#clearLeaderboard:hover {
+  background-color: #d32f2f;
+}

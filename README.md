@@ -1,2 +1,3 @@
 # Gaming
-for fun
+for fun only
+
